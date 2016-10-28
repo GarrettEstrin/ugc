@@ -1,5 +1,31 @@
-#loginPage {
+body {
+  background-color: black;
+}
+
+/*#loginPage {
   background-image: url('../images/home.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}*/
+
+.col-md-4 {
+  margin: 0 auto;
+
+}
+
+.gold{
+  color: #d1b280;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.goldBtn, .goldBtn a {
+  background-color: #d1b280;
+  color: black;
+}
+
+.paperBtn {
+  background-color: #efefef;
 }
