@@ -6,10 +6,14 @@ var passportLocalMongoose = require('passport-local-mongoose')
 var User = new Schema({
   username: String,
   password: String,
-  kitties: [{type: mongoose.Schema.Types.ObjectId, ref: 'Kitty'}]
-})
+  mpg: Number,
+  trips: []
+
+},
+{ collection: '_User' }
+)
 
 User.plugin(passportLocalMongoose)
 
 
-module.exports = mongoose.model('users', User)
+module.exports = mongoose.model('_User', User)

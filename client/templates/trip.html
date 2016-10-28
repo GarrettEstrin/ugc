@@ -1,0 +1,17 @@
+<div class="col-md-4">
+  <h1>New Trip</h1>
+  <form class="form" ng-submit="tc.addTrip()">
+    <div class="form-group">
+      <label>Trip Description</label>
+      <input type="text" class="form-control" name="description" ng-model="tc.newTrip.description" required>
+    </div>
+    <div class="form-group">
+      <label>Miles Traveled</label>
+        <input type="text" class="form-control" name="miles" ng-model="tc.newTrip.miles" required>
+      </div>
+      <div>
+        <!-- <button type="submit" class="btn btn-default">Add Trip</button> -->
+        <button ng-click="tc.createTrip()" class="btn btn-default">Add Trip</button>
+      </div>
+  </form>
+</div>

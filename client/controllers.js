@@ -4,6 +4,7 @@ angular.module('myApp')
   .controller('logoutController', logoutController)
   .controller('registerController', registerController)
   .controller('SingleUserController', SingleUserController)
+  .controller('tripController', tripController)
 
 
   mainController.$inject = ['$rootScope', '$state', 'AuthService']
@@ -11,6 +12,7 @@ angular.module('myApp')
   logoutController.$inject = ['$state', 'AuthService']
   registerController.$inject = ['$state', 'AuthService']
   SingleUserController.$inject = ['$http', 'AuthService', '$rootScope']
+  tripController.$inject = ['$http', 'AuthService', '$state']
 
 
 function mainController($rootScope, $state, AuthService) {
@@ -24,6 +26,15 @@ function mainController($rootScope, $state, AuthService) {
   })
 
   console.log($rootScope)
+}
+
+function tripController($http, AuthService, $state){
+  var vm = this
+  vm.createTrip = function(){
+    // User.findByIdAndUpdate()
+    console.log("This should create a new trip under the currently logged in user");
+    $state.go('trip-success')
+  }
 }
 
 // LOGIN CONTROLLER:

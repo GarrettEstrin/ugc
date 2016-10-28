@@ -24,13 +24,14 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/register.html',
       controller: 'registerController as registerCtrl'
     })
-    .state('one', {
-      url: '/one',
-      template: '<h1>This is page one!</h1>'
+    .state('newTrip', {
+      url: '/new-Trip',
+      templateUrl: 'templates/trip.html',
+      controller: 'tripController as tc'
     })
-    .state('two', {
-      url: '/two',
-      template: '<h1>This is page two!</h1>',
+    .state('trip-success', {
+      url: '/tripSuccess',
+      templateUrl: 'templates/trip-created.html',
       restricted: true
     })
     .state('profile', {
